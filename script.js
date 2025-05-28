@@ -70,9 +70,7 @@ function saveTodoLocal(){
      let todoSave= JSON.stringify(todos)
     localStorage.setItem("todos",todoSave)
 }
-function getTodoLocal(){
-let getTodo = localStorage.getItem("todos")|| []
- return JSON.parse(getTodo)
-
-    
+function getTodoLocal() {
+  const getTodo = localStorage.getItem("todos");
+  return getTodo ? JSON.parse(getTodo) : [];
 }
